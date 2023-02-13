@@ -57,7 +57,6 @@ function onImgGalleryItemClick(event) {
     {
       // Функція, яка виконується перед відображенням Ligtnbox
       onShow: (instance) => {
-        //
         document.addEventListener("keydown", onEscapeKeydown);
       },
 
