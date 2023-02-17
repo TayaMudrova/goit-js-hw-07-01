@@ -35,14 +35,15 @@ function createImgGalleryMarkup(images) {
 
 // Обробник події click на картинку галереї
 function onImgGalleryItemClick(event) {
-  // Якщо клік не по картинці - вихід з функції
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
 
   //Зображення обгорнуте посиланням, по кліку за замовчуванням користувач буде перенаправлений на іншу сторінку
   // preventDefault забороняє цю поведінку за замовчуванням.
   event.preventDefault();
+
+  // Якщо клік не по картинці - вихід з функції
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
 
   //Отримання url великого зображення
   const urlOriginal = event.target.dataset.source;
